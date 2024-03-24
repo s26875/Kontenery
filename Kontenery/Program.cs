@@ -297,39 +297,31 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Tworzenie statków kontenerowych
+       
         Kontenerowiec kontenerowiec1 = new Kontenerowiec(20, 5, 100);
         Kontenerowiec kontenerowiec2 = new Kontenerowiec(15, 10, 150);
 
-        // Tworzenie kontenerów
         Chlodniczy chlodniczy = new Chlodniczy("KON-C-001", 10, 2, 2, 2, "Ryby", 0);
         Plyny plyny = new Plyny("KON-L-002", 15, 2, 2, 2);
         Gaz gaz = new Gaz("KON-G-003", 20, 2, 2, 2, 100);
 
-        // Załadunek kontenerów do statku
         kontenerowiec1.DodajKontener(chlodniczy);
         kontenerowiec1.DodajKontener(plyny);
         kontenerowiec1.DodajKontener(gaz);
 
-        // Wyświetlenie informacji o statku i jego ładunku
         kontenerowiec1.WypiszInformacje();
 
-        // Załadunek ładunku do kontenera chłodniczego
         chlodniczy.Ladunek(5);
-        // Wyświetlenie informacji o załadowanym kontenerze
+
         kontenerowiec1.WypiszInformacjeOKontenerze("KON-C-001");
 
-        // Przeniesienie kontenera gazowego z jednego statku na drugi
         Kontenerowiec.PrzeniesKontener(kontenerowiec1, kontenerowiec2, "KON-G-003");
 
-        // Usunięcie kontenera płynów ze statku
         kontenerowiec1.UsunKontener("KON-L-002");
 
-        // Zastąpienie kontenera na statku innym kontenerem
         Chlodniczy nowyChlodniczy = new Chlodniczy("KON-C-004", 12, 2, 2, 2, "Czekolada", -18);
         kontenerowiec1.ZastapKontener("KON-C-001", nowyChlodniczy);
 
-        // Wyświetlenie informacji o statkach po zmianach
         Console.WriteLine("\nPo zmianach:");
         Console.WriteLine("Kontenerowiec 1:");
         kontenerowiec1.WypiszInformacje();
@@ -425,29 +417,23 @@ class Program
 
     static void DodajKontenerowiec()
     {
-        // Implementacja dodawania kontenerowca (pytanie o parametry, tworzenie instancji, dodanie do listy)
     }
 
     static void UsunKontenerowiec()
     {
-        // Implementacja usuwania kontenerowca (wybór i usunięcie z listy)
     }
 
     static void DodajKontener()
     {
-        // Implementacja dodawania kontenera (pytanie o parametry, tworzenie instancji odpowiedniego typu, dodanie do listy)
     }
 
     static void ZaladujKontenerNaStatek()
     {
-        // Implementacja załadunku kontenera na statek (wybór kontenera i statku, wykonanie operacji)
     }
 
     static void UsunKontenerZeStatku()
     {
-        // Implementacja usuwania kontenera ze statku (wybór kontenera i wykonanie operacji)
     }
 
-    // Tutaj należy dodać pozostałe metody potrzebne do obsługi logiki biznesowej aplikacji
 }
 */
